@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML FORM USING TABLE ELEMENTS</title>
+
+    <!-- STYLE SECTION -->
+
+<style>
+    body{
+        font-family: arial, sans-serif;
+        font-size: 14px;
+    }
+    .tb{
+        width: 100%;
+        max-width: 800%;
+        border-collapse: collapse;
+    }
+    .td{
+        padding: 4px 8px;
+        vertical-align: top;
+    }
+    .sh{
+        background: #fbf6c7;
+        font-weight: bold;
+        border: 1px solid #000;
+        padding: 4px 6px;
+    }
+    .it{
+        width: 180px;
+        box-sizing: border-box;
+    }
+    .ta{
+        width: 100%;
+        max-width: 500px;
+        height: 150px;
+        resize: vertical;
+    }
+    .bc{
+        margin-top: 15px;
+    }
+    .bci{
+        padding: 2px 10px;
+        margin-right: 5px;
+    }
+</style>
+
+</head>
+<body class="body">
+
+    <form action="#" method="post">
+    <table>
+
+        <!-- PERSONAL INFORMATION SECTION -->
+
+        <tr>
+            <th colspan="4" class="sh">Personal Information</th>
+        </tr>
+        <tr>
+            <td> First Name:</td>
+            <td><input type="text" name="FirstName"></td>
+            <td> Gender:<input type="radio" name="Gender">Male</td>
+            <td><input type="radio" name="Gender">Female</td>
+        </tr>
+        <tr>
+            <td>Last Name:</td>
+            <td><input type="text" name="LastName"></td>
+            <td> Nationality:
+                <select name="nationality">
+                <option value="Filipino">Filipino</option>
+                <option value="Canadian">Canadian</option>
+                <option value="American">American</option>
+                <option value="Japanese">Japanese</option>
+                <option value="Korean">Koean</option>
+                <option value="Chinese">Chinese</option>
+                <option value="others">Others</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>Age:</td>
+            <td><input class="it" type="number" name="Age" step="1"></td>
+            <td>Birthdate:
+            <input class="it" type="datetime-local" name="birthdate"></td>
+        </tr>
+        <tr>
+            <td>Email Address:</td>
+            <td><input type="email" name="email"></td>
+            <td colspan="2"></td>
+        </tr>
+        <tr>
+            <td>Address:</td>
+            <td colspan="3">
+                <textarea class="ta" name="address"></textarea>
+            </td>
+        </tr>
+
+        <!-- SPACING ROW -->
+
+        <tr>
+            <td colspan="4" style="height: 10px;"></td>
+        </tr>
+
+        <!-- MEDICAL HISTORY SECTION -->
+
+        <tr>
+            <td colspan="4" class="sh">Medical History</td>
+        </tr>
+
+        <tr>
+            <td colspan="4">
+                <input type="checkbox" name="history" value="Small pox"> Small pox
+                <input type="checkbox" name="history" value="Mumps"> Mumps
+                <input type="checkbox" name="history" value="Dizziness"> Dizziness
+                <input type="checkbox" name="history" value="Sneezing"> Sneezing
+            </td>
+        </tr>
+
+        <!-- SPACING SECCTION -->
+
+        <tr>
+            <td colspan="4" style="height: 10px;"></td>
+        </tr>
+
+        <!-- CURRENT MEDICATION SECTION -->
+
+        <tr>
+            <td colspan="4" class="sh">Current Medication</td>
+        </tr>
+
+        <tr>
+            <td colspan="4"> Are you currently taking any medicstion?
+                <input type="radio" name="taking_medication" value="Yes"> Yes
+                <input type="radio" name="taking_medication" value="No"> No
+            </td>
+        </tr>
+
+        <tr>
+            <td colspan="4">
+                If you are currently taking medication, please indicate int in the space below:
+            </td>
+        </tr>
+        <tr>
+            <td colspan="4">
+                <textarea class="ta" name="medication_details"></textarea>
+            </td>
+        </tr>
+    </table>
+
+    <!-- SUBMIT AND CLEAR BUTTONS -->
+
+    <div class="bc">
+        <input class="bci" type="submit" value="SUBMIT">
+        <input class="bci" type="reset" value="CLEAR">
+    </div>
+
+    </form>
+</body>
+</html>
